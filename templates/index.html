@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Example</title>
+</head>
+<body>
+    <h1>WebSocket Example</h1>
+
+    <form id="messageForm">
+        <label for="message">Enter Message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="button" onclick="sendMessage()">Send Message</button>
+    </form>
+
+    <div id="messages"></div>
+
+    <script>
+        const socket = new WebSocket('ws://' + window.location.host + ':5001/reverse');
+
+        socket.onmessage = function (event) {
+            const messagesDiv = document.getElementById('messages');
+            messagesDiv.innerHTML += '<p>Server: ' + event.data + '</p>';
+        };
+
+        function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const message = messageInput.value;
+
+            if (message.trim() !== '') {
+                socket.send(message);
+                const messagesDiv = document.getElementById('messages');
+                messagesDiv.innerHTML += '<p>You: ' + message + '</p>';
+                messageInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
+

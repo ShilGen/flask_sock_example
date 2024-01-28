@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sock import Sock
 
 app = Flask(__name__)
@@ -6,7 +6,7 @@ sock = Sock(app)
 
 @app.route('/')
 def index():
-    return 'Hello, WebSockets!'
+    return render_template('index.html')
 
 @sock.route('/reverse')
 def reverse(ws):
