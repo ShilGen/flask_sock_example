@@ -1,3 +1,5 @@
+https://gist.github.com/ShilGen/4736422b1b3fdb657652510dc8b53528
+
 ### Запуск Gunicorn как служба ОС
 
 gunicorn.socket
