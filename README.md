@@ -100,7 +100,7 @@ cp 000-default.conf 000-default-copy.conf
 
 ```bash
 a2enmod proxy_http
-systemctl stop apache2
+a2ensite default000
 ```
 Запуск, перезапуск сервера
 
