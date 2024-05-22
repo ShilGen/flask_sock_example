@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance 
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/app
+ExecStart=/usr/bin/python3 /usr/local/bin/gunicorn --workers 4 -b 0.0.0.0:5001 --threads 100 app:app
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
