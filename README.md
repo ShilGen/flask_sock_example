@@ -1,3 +1,13 @@
+# Build a Flask WebSocket Server with Flask-Sock
+
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Rctz-kCvuwE/0.jpg)](https://www.youtube.com/watch?v=Rctz-kCvuwE)
+
+
+
+Full Bash history:
+
+
 https://gist.github.com/ShilGen/4736422b1b3fdb657652510dc8b53528
 
 ### Запуск Gunicorn как служба ОС
@@ -108,3 +118,11 @@ a2ensite default000
 systemctl start apache2
 systemctl restart apache2
 ```
+
+Установка зависимостей 
+
+```bash
+pip install flask flask-sock
+```
+
+
