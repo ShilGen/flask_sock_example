@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ShilGen/flask_sock_example/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ShilGen/flask_sock_example/?branch=master)
+
 # Build a Flask WebSocket Server with Flask-Sock
 
 
