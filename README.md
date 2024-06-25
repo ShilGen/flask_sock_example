@@ -125,4 +125,11 @@ systemctl restart apache2
 pip install flask flask-sock
 ```
 
+Проверка установленной версии пакета Flask
+
+```python3
+import importlib
+importlib.metadata.version("flask")
+```
+
 
